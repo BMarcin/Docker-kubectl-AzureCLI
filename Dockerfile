@@ -1,8 +1,12 @@
 FROM docker:dind
 
-# install AzureCLI
 RUN apk update
 RUN apk upgrade
+
+#install wget
+RUN apk add --no-cache wget
+
+# install AzureCLI
 RUN apk add --no-cache bash make py-pip
 RUN apk add --no-cache --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev curl
 RUN pip install azure-cli
