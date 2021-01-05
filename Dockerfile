@@ -8,7 +8,8 @@ RUN apk add --no-cache wget
 
 # install AzureCLI
 RUN apk add --no-cache bash make py-pip
-RUN apk add --no-cache --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev curl git
+RUN apk add --no-cache --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev curl
+RUN apk add --no-cache git
 RUN pip install azure-cli
 
 # install kubectl
